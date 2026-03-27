@@ -1,11 +1,32 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
+import os
 
 # Create app
 app = Flask(__name__)
 CORS(app)
 
+# -------------------------------
+# Serve Frontend (IMPORTANT FIX)
+# -------------------------------
+@app.route("/")
+def home():
+    return send_from_directory("../frontend", "index.html")
+
+# Serve CSS
+@app.route("/style.css")
+def style():
+    return send_from_directory("../frontend", "style.css")
+
+# Serve JS
+@app.route("/script.js")
+def script():
+    return send_from_directory("../frontend", "script.js")
+
+
+# -------------------------------
 # Validation logic
+# -------------------------------
 def validate_design(data):
     errors = []
     warnings = []
@@ -29,7 +50,9 @@ def validate_design(data):
     return errors, warnings, suggestions
 
 
+# -------------------------------
 # Score logic
+# -------------------------------
 def calculate_score(data):
     score = 10
 
@@ -42,7 +65,9 @@ def calculate_score(data):
     return max(score, 0)
 
 
+# -------------------------------
 # API route
+# -------------------------------
 @app.route("/validate", methods=["POST"])
 def validate():
     data = request.json
@@ -58,6 +83,8 @@ def validate():
     })
 
 
-# Run server
+# -------------------------------
+# Run server (for local testing)
+# -------------------------------
 if __name__ == "__main__":
     app.run(debug=True)
