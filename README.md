@@ -17,7 +17,7 @@ This project is an AI-assisted CAD validation system that helps engineers detect
 Helps reduce design errors, cost, and development time in engineering workflows.
 
 ##  Demo
-![Demo](Screenshot 2026-03-27 203813.png)
+![Demo](./Screenshot%202026-03-27%20203813.png)
 
 ## Author
 Arya
