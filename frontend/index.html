@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI CAD Validator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1>AI CAD Validation System</h1>
+
+  <div class="card">
+    <h2>Design Input</h2>
+
+    <input id="thickness" placeholder="Thickness (mm)">
+    <input id="hole" placeholder="Hole Diameter (mm)">
+    <input id="width" placeholder="Width (mm)">
+
+    <button onclick="validate()">Validate Design</button>
+  </div>
+
+  <div class="card" id="result">
+    <h2>Validation Report</h2>
+    <p>Run validation to see results</p>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

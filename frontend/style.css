@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI';
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 12px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #22c55e;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
