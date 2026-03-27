@@ -1,5 +1,7 @@
 async function validate() {
 
+  document.getElementById("result").innerHTML = "<p>⏳ Analyzing design...</p>";
+
   const data = {
     thickness: parseFloat(document.getElementById("thickness").value),
     hole_diameter: parseFloat(document.getElementById("hole").value),
