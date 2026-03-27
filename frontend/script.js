@@ -6,7 +6,7 @@ async function validate() {
     width: parseFloat(document.getElementById("width").value)
   };
 
-  const res = await fetch("http://127.0.0.1:5000/validate", {
+  const res = await fetch("https://ai-cad-validator.onrender.com/validate", {
     method: "POST",
     headers: {"Content-Type": "application/json"},
     body: JSON.stringify(data)
